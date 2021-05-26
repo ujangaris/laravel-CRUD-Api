@@ -1,6 +1,6 @@
 <h1>List Products</h1>
 <h3>{{ $subJudul }}</h3>
-<h2>{{ $cth }}</h2>
+<h2>{{ $contoh }}</h2>
 <table>
     <thead>
         <tr>
