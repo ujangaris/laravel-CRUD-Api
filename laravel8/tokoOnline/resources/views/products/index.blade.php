@@ -1,6 +1,4 @@
-<h1>List Products</h1>
-<h3>{{ $subJudul }}</h3>
-<h2>{{ $contoh }}</h2>
+
 <table>
     <thead>
         <tr>
@@ -10,15 +8,14 @@
         </tr>
     </thead>
     <tbody>
+        @foreach ($products as $product )
+
         <tr>
-            <td>Celana Boxer</td>
-            <td>Nyaman di pakai</td>
-            <td>Rp. 45.000</td>
+            <td>{{ $product->name }}</td>
+            <td>{{ $product->description }}</td>
+            <td>Rp.{{$product->price}}</td>
         </tr>
-        <tr>
-            <td>Kaos Oblong</td>
-            <td>Kualitas Import</td>
-            <td>Rp. 150.000</td>
-        </tr>
+        @endforeach
+
     </tbody>
 </table>
