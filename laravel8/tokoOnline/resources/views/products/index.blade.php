@@ -18,4 +18,5 @@
         @endforeach
 
     </tbody>
+    <a href="/products/create">Create</a>
 </table>

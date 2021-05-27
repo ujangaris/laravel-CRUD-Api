@@ -13,4 +13,14 @@ class ProductController extends Controller
         // dd($products);
         return view('products.index', compact('products'));
     }
+
+    function create(){
+        return view('products.create');
+    }
+
+    public function store(Request $request)
+    {
+        Product::create($request->all());
+        return redirect('/products');
+    }
 }
