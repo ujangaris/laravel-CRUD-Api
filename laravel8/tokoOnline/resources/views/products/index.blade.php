@@ -16,6 +16,12 @@
             <td>Rp.{{$product->price}}</td>
             <td>
                 <a href="/products/{{ $product->id }}/edit">Edit</a>
+                <form action="/products/{{ $product->id }}" method="POST">
+                    @method('delete')
+                    @csrf
+                    <input type="submit" value="Delete">
+                </form>
+
             </td>
         </tr>
         @endforeach
