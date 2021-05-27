@@ -23,4 +23,12 @@ class ProductController extends Controller
         Product::create($request->all());
         return redirect('/products');
     }
+
+    public function edit($id)
+    {
+        $product = Product::find($id);
+        return view('products.edit', compact(['product']));
+    }
+
+
 }

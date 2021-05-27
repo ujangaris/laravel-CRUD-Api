@@ -14,6 +14,9 @@
             <td>{{ $product->name }}</td>
             <td>{{ $product->description }}</td>
             <td>Rp.{{$product->price}}</td>
+            <td>
+                <a href="/products/{{ $product->id }}/edit">Edit</a>
+            </td>
         </tr>
         @endforeach
 
