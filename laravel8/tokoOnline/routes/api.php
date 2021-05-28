@@ -21,7 +21,7 @@ use Illuminate\Support\Facades\Route;
  */
 
 Route::get('/products', [ProductApiController::class, 'index']);
-Route::get('/products/create', [ProductApiController::class, 'create']);
+// Route::get('/products/create', [ProductApiController::class, 'create']);ini gak perlu karna api hanya melakukan proses untuk inputan di aplikasi yang mengkonsumsinya saja!
 Route::post('/products', [ProductApiController::class, 'store']);
 Route::get('/products/{id}/edit', [ProductApiController::class, 'edit']);
 Route::get('/products/{id}', [ProductApiController::class, 'show']);

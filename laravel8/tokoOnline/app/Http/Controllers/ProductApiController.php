@@ -18,4 +18,10 @@ class ProductApiController extends Controller
         $product = Product::find($id);
         return response()->json(['message' => 'success', 'data' => $product]);
     }
+
+    public function store(Request $request)
+    {
+        $product = Product::create($request->all());
+        return response()->json(['message' => 'success', 'data' => $product]);
+    }
 }
