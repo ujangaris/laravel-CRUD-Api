@@ -31,4 +31,11 @@ class ProductApiController extends Controller
         $product->update($request->all());
         return response()->json(['message' => 'success', 'data' => $product]);
     }
+
+    public function destroy($id)
+    {
+        $product = Product::find($id);
+        $product->delete();
+        return response()->json(['message' => ' delete success', 'data' => null]);
+    }
 }
